@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html><head><title>Le dernier des mexicain</title>
+<link rel="icon" type="image/gif" href="lock.gif"/>
+<style type="text/css">div {font-size: 12px;}</style>
+<meta http-equiv="Cache-Control" content="no-cache">
+<style type="text/css">
+body {
+background-image: url('scene.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+img {
+border: 0;
+}
+</style>
+</head>
+
+<center>
+<br>
+<br>
+<br>
+<br>
+Hola amigo
+<br>
+Nous vous invitons a notre diner theme mexicain. 
+<BR>
+<a href="menu.html"> ICI C EST LE MENU</a>
+<a href="info.html"> ICI C EST LES INFOS</a>
+<br>
+Venez deguisé ca va etre marrant putain. 
+<br>
+</center>
+<body>
+<div style="position: absolute; left: 10%; top: 31%; padding: 2em;">
+<img src="icon/alice.png" width="150" height="150"  alt="alice" title="alice" border="0"></a></div>
+
+<div style="position: absolute; left: 20%; top: 30%; padding: 2em;">
+<img src="icon/antoine.png" width="150" height="150"  alt="Antoine" title="Antoine" border="0"></a></div>
+
+<div style="position: absolute; left: 30%; top: 30%; padding: 2em;">
+<img src="icon/justin.png" width="150" height="150"  alt="Justin" title="Justin" border="0"></a></div>
+
+<div style="position: absolute; left: 40%; top: 32%; padding: 2em;">
+<img src="icon/marion.png" width="150" height="150"  alt="marion" title="marion" border="0"></a></div>
+
+<div style="position: absolute; left: 50%; top: 31%; padding: 2em;">
+<img src="icon/mathilde.png" width="150" height="150"  alt="mathilde" title="mathilde" border="0"></a></div>
+
+<div style="position: absolute; left: 60%; top: 30%; padding: 2em;">
+<img src="icon/quellec.png" width="150" height="150"  alt="quellec" title="quellec" border="0"></a></div>
+
+<div style="position: absolute; left: 70%; top: 30%; padding: 2em;">
+<img src="icon/rod.png" width="150" height="150"  alt="Dude" title="Dude" border="0"></a></div>
+
+<div style="position: absolute; left: 8%; top: 35%; padding: 2em;">
+<img src="icon/corps1.png" width="200" height="250" alt="Date" title="Date" border="0"></a></div>
+
+<div style="position: absolute; left: 18%; top: 35%; padding: 2em;">
+<img src="icon/corps8.png" width="200" height="250" alt="Salade" title="Salade" border="0"></a></div>
+
+<div style="position: absolute; left: 28%; top: 35%; padding: 2em;">
+<img src="icon/corps7.png" width="200" height="250"alt="tomate" title="tomate" border="0"></a></div>
+
+<div style="position: absolute; left: 38%; top: 35%; padding: 2em;">
+<img src="icon/corps2.png" width="200" height="250" alt="Druides" title="Druides" border="0"></a></div>
+
+<div style="position: absolute; left: 48%; top: 35%; padding: 2em;">
+<img src="icon/corps3.png" width="200" height="250" alt="Escargot" title="Escargot" border="0"></a></div>
+
+<div style="position: absolute; left: 58%; top: 35%; padding: 2em;">
+<img src="icon/corps4.png" width="200" height="250" alt="Puzzle" title="Puzzle" border="0"></a></div>
+
+<div style="position: absolute; left: 68%; top: 35%; padding: 2em;">
+<img src="icon/corps5.png" width="200" height="250" alt="rendez-vous" title="rendez-vous" border="0"></a></div>
+
+<div style="position: absolute; left: 78%; top: 35%; padding: 2em;">
+<img src="icon/corps6.png" width="200" height="250" width="77px" height="85px" alt="cuisson" title="cuisson" border="0"></a></div>
+
+ <script type="text/javascript">
+<!--
+//Snow - http://www.btinternet.com/~kurt.grigg/javascript
+
+if ((document.getElementById) &&
+window.addEventListener || window.attachEvent){
+
+(function(){
+
+//Configure here.
+
+var num = 1; //Number of flakes
+var timer = 80; //setTimeout speed. Varies on different comps
+var enableinNS6 = 1 //Enable script in NS6/Mozilla? Snow animation could be slow in those browsers. (1=yes, 0=no).
+var url_gif= "http://data.bloggif.com/distant/user/store/5/b/4/6/206a9988c57069f2d5d1c485083664b5.png"; // adresse de l'image
+
+//End.
+
+var y = [];
+var x = [];
+var fall = [];
+var theFlakes = [];
+var sfs = [];
+var step = [];
+var currStep = [];
+var h,w,r;
+var d = document;
+var pix = "px";
+var domWw = (typeof window.innerWidth == "number");
+var domSy = (typeof window.pageYOffset == "number");
+var idx = d.getElementsByTagName('div').length;
+
+if (d.documentElement.style &&
+typeof d.documentElement.style.MozOpacity == "string")
+num = 6;
+
+for (i = 0; i < num; i++){
+sfs[i] = 15; // Math.round(1 + Math.random() * 1);
+
+document.write('<div id="flake'+(idx+i)+'" style="position:absolute;top:0px;left:0px;width:" mce_style="position:absolute;top:0px;left:0px;width:"><img src="'+url_gif+'" mce_src="'+url_gif+'"></div>');
+
+
+
+// '+sfs[i]+'px;height:'+sfs[i]+'px;background-color:#ffffff;font-size:'+sfs[i]+'px;border:1px solid #dddddd;
+
+currStep[i] = 0;
+fall[i] = (sfs[i] == 1)?
+Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+step[i] = (sfs[i] == 1)?
+0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+}
+
+
+if (domWw) r = window;
+else{
+if (d.documentElement &&
+typeof d.documentElement.clientWidth == "number" &&
+d.documentElement.clientWidth != 0)
+r = d.documentElement;
+else{
+if (d.body &&
+typeof d.body.clientWidth == "number")
+r = d.body;
+}
+}
+
+
+function winsize(){
+var oh,sy,ow,sx,rh,rw;
+if (domWw){
+if (d.documentElement && d.defaultView &&
+typeof d.defaultView.scrollMaxY == "number"){
+oh = d.documentElement.offsetHeight;
+sy = d.defaultView.scrollMaxY;
+ow = d.documentElement.offsetWidth*0.80;
+sx = d.defaultView.scrollMaxX;
+rh = oh-sy;
+rw = ow-sx;
+}
+else{
+rh = r.innerHeight;
+rw = r.innerWidth*0.80;
+}
+h = rh - 2;
+w = rw - 2;
+}
+else{
+h = r.clientHeight - 2;
+w = r.clientWidth*0.80;
+}
+}
+
+
+function scrl(yx){
+var y,x;
+if (domSy){
+y = r.pageYOffset;
+x = r.pageXOffset;
+}
+else{
+y = r.scrollTop;
+x = r.scrollLeft;
+}
+return (yx == 0)?y:x;
+}
+
+
+function snow(){
+var dy,dx;
+
+for (i = 0; i < num; i++){
+dy = fall[i];
+dx = fall[i] * Math.cos(currStep[i]);
+
+y[i]+=dy;
+x[i]+=dx;
+
+if (x[i] >= w || y[i] >= h){
+y[i] = -10;
+x[i] = Math.round(Math.random() * w);
+fall[i] = (sfs[i] == 1)?
+Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+step[i] = (sfs[i] == 1)?
+0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+}
+
+theFlakes[i].top = y[i] + scrl(0) + pix;
+theFlakes[i].left = x[i] + scrl(1) + pix;
+
+currStep[i]+=step[i];
+}
+setTimeout(snow,timer);
+}
+
+
+function init(){
+winsize();
+for (i = 0; i < num; i++){
+theFlakes[i] = document.getElementById("flake"+(idx+i)).style;
+y[i] = Math.round(Math.random()*h);
+x[i] = Math.round(Math.random()*w);
+}
+snow();
+}
+
+
+if (window.addEventListener){
+window.addEventListener("resize",winsize,false);
+window.addEventListener("load",init,false);
+}
+else if (window.attachEvent){
+window.attachEvent("onresize",winsize);
+window.attachEvent("onload",init);
+}
+
+})();
+}//End.
+// -->
+// --&gt;
+// --&gt;
+// --&gt;
+</script> <!-- fin flocons --></p>
+<script type="text/javascript">
+<!--
+//Snow - http://www.btinternet.com/~kurt.grigg/javascript
+
+if ((document.getElementById) &&
+window.addEventListener || window.attachEvent){
+
+(function(){
+
+//Configure here.
+
+var num = 1; //Number of flakes
+var timer = 80; //setTimeout speed. Varies on different comps
+var enableinNS6 = 1 //Enable script in NS6/Mozilla? Snow animation could be slow in those browsers. (1=yes, 0=no).
+var url_gif= "http://data.bloggif.com/distant/user/store/c/0/9/b/8d280c8558f53232dc25599b843ab90c.png"; // adresse de l'image
+
+//End.
+
+var y = [];
+var x = [];
+var fall = [];
+var theFlakes = [];
+var sfs = [];
+var step = [];
+var currStep = [];
+var h,w,r;
+var d = document;
+var pix = "px";
+var domWw = (typeof window.innerWidth == "number");
+var domSy = (typeof window.pageYOffset == "number");
+var idx = d.getElementsByTagName('div').length;
+
+if (d.documentElement.style &&
+typeof d.documentElement.style.MozOpacity == "string")
+num = 6;
+
+for (i = 0; i < num; i++){
+sfs[i] = 15; // Math.round(1 + Math.random() * 1);
+
+document.write('<div id="flake'+(idx+i)+'" style="position:absolute;top:0px;left:0px;width:" mce_style="position:absolute;top:0px;left:0px;width:"><img src="'+url_gif+'" mce_src="'+url_gif+'"></div>');
+
+
+
+// '+sfs[i]+'px;height:'+sfs[i]+'px;background-color:#ffffff;font-size:'+sfs[i]+'px;border:1px solid #dddddd;
+
+currStep[i] = 0;
+fall[i] = (sfs[i] == 1)?
+Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+step[i] = (sfs[i] == 1)?
+0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+}
+
+
+if (domWw) r = window;
+else{
+if (d.documentElement &&
+typeof d.documentElement.clientWidth == "number" &&
+d.documentElement.clientWidth != 0)
+r = d.documentElement;
+else{
+if (d.body &&
+typeof d.body.clientWidth == "number")
+r = d.body;
+}
+}
+
+
+function winsize(){
+var oh,sy,ow,sx,rh,rw;
+if (domWw){
+if (d.documentElement && d.defaultView &&
+typeof d.defaultView.scrollMaxY == "number"){
+oh = d.documentElement.offsetHeight;
+sy = d.defaultView.scrollMaxY;
+ow = d.documentElement.offsetWidth*0.80;
+sx = d.defaultView.scrollMaxX;
+rh = oh-sy;
+rw = ow-sx;
+}
+else{
+rh = r.innerHeight;
+rw = r.innerWidth*0.80;
+}
+h = rh - 2;
+w = rw - 2;
+}
+else{
+h = r.clientHeight - 2;
+w = r.clientWidth*0.80;
+}
+}
+
+
+function scrl(yx){
+var y,x;
+if (domSy){
+y = r.pageYOffset;
+x = r.pageXOffset;
+}
+else{
+y = r.scrollTop;
+x = r.scrollLeft;
+}
+return (yx == 0)?y:x;
+}
+
+
+function snow(){
+var dy,dx;
+
+for (i = 0; i < num; i++){
+dy = fall[i];
+dx = fall[i] * Math.cos(currStep[i]);
+
+y[i]+=dy;
+x[i]+=dx;
+
+if (x[i] >= w || y[i] >= h){
+y[i] = -10;
+x[i] = Math.round(Math.random() * w);
+fall[i] = (sfs[i] == 1)?
+Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+step[i] = (sfs[i] == 1)?
+0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+}
+
+theFlakes[i].top = y[i] + scrl(0) + pix;
+theFlakes[i].left = x[i] + scrl(1) + pix;
+
+currStep[i]+=step[i];
+}
+setTimeout(snow,timer);
+}
+
+
+function init(){
+winsize();
+for (i = 0; i < num; i++){
+theFlakes[i] = document.getElementById("flake"+(idx+i)).style;
+y[i] = Math.round(Math.random()*h);
+x[i] = Math.round(Math.random()*w);
+}
+snow();
+}
+
+
+if (window.addEventListener){
+window.addEventListener("resize",winsize,false);
+window.addEventListener("load",init,false);
+}
+else if (window.attachEvent){
+window.attachEvent("onresize",winsize);
+window.attachEvent("onload",init);
+}
+
+})();
+}//End.
+// -->
+// --&gt;
+// --&gt;
+// --&gt;
+</script> <!-- fin flocons --></p>
+<script type="text/javascript">
+<!--
+//Snow - http://www.btinternet.com/~kurt.grigg/javascript
+
+if ((document.getElementById) &&
+window.addEventListener || window.attachEvent){
+
+(function(){
+
+//Configure here.
+
+var num = 1; //Number of flakes
+var timer = 80; //setTimeout speed. Varies on different comps
+var enableinNS6 = 1 //Enable script in NS6/Mozilla? Snow animation could be slow in those browsers. (1=yes, 0=no).
+var url_gif= "http://data.bloggif.com/distant/user/store/e/d/4/3/f984c78e097272352b23921a3c7a34de.png"; // adresse de l'image
+
+//End.
+
+var y = [];
+var x = [];
+var fall = [];
+var theFlakes = [];
+var sfs = [];
+var step = [];
+var currStep = [];
+var h,w,r;
+var d = document;
+var pix = "px";
+var domWw = (typeof window.innerWidth == "number");
+var domSy = (typeof window.pageYOffset == "number");
+var idx = d.getElementsByTagName('div').length;
+
+if (d.documentElement.style &&
+typeof d.documentElement.style.MozOpacity == "string")
+num = 6;
+
+for (i = 0; i < num; i++){
+sfs[i] = 15; // Math.round(1 + Math.random() * 1);
+
+document.write('<div id="flake'+(idx+i)+'" style="position:absolute;top:0px;left:0px;width:" mce_style="position:absolute;top:0px;left:0px;width:"><img src="'+url_gif+'" mce_src="'+url_gif+'"></div>');
+
+
+
+// '+sfs[i]+'px;height:'+sfs[i]+'px;background-color:#ffffff;font-size:'+sfs[i]+'px;border:1px solid #dddddd;
+
+currStep[i] = 0;
+fall[i] = (sfs[i] == 1)?
+Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+step[i] = (sfs[i] == 1)?
+0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+}
+
+
+if (domWw) r = window;
+else{
+if (d.documentElement &&
+typeof d.documentElement.clientWidth == "number" &&
+d.documentElement.clientWidth != 0)
+r = d.documentElement;
+else{
+if (d.body &&
+typeof d.body.clientWidth == "number")
+r = d.body;
+}
+}
+
+
+function winsize(){
+var oh,sy,ow,sx,rh,rw;
+if (domWw){
+if (d.documentElement && d.defaultView &&
+typeof d.defaultView.scrollMaxY == "number"){
+oh = d.documentElement.offsetHeight;
+sy = d.defaultView.scrollMaxY;
+ow = d.documentElement.offsetWidth*0.80;
+sx = d.defaultView.scrollMaxX;
+rh = oh-sy;
+rw = ow-sx;
+}
+else{
+rh = r.innerHeight;
+rw = r.innerWidth*0.80;
+}
+h = rh - 2;
+w = rw - 2;
+}
+else{
+h = r.clientHeight - 2;
+w = r.clientWidth*0.80;
+}
+}
+
+
+function scrl(yx){
+var y,x;
+if (domSy){
+y = r.pageYOffset;
+x = r.pageXOffset;
+}
+else{
+y = r.scrollTop;
+x = r.scrollLeft;
+}
+return (yx == 0)?y:x;
+}
+
+
+function snow(){
+var dy,dx;
+
+for (i = 0; i < num; i++){
+dy = fall[i];
+dx = fall[i] * Math.cos(currStep[i]);
+
+y[i]+=dy;
+x[i]+=dx;
+
+if (x[i] >= w || y[i] >= h){
+y[i] = -10;
+x[i] = Math.round(Math.random() * w);
+fall[i] = (sfs[i] == 1)?
+Math.round(2 + Math.random() * 2): Math.round(3 + Math.random() * 2);
+step[i] = (sfs[i] == 1)?
+0.05 + Math.random() * 0.1 : 0.05 + Math.random() * 0.05;
+}
+
+theFlakes[i].top = y[i] + scrl(0) + pix;
+theFlakes[i].left = x[i] + scrl(1) + pix;
+
+currStep[i]+=step[i];
+}
+setTimeout(snow,timer);
+}
+
+
+function init(){
+winsize();
+for (i = 0; i < num; i++){
+theFlakes[i] = document.getElementById("flake"+(idx+i)).style;
+y[i] = Math.round(Math.random()*h);
+x[i] = Math.round(Math.random()*w);
+}
+snow();
+}
+
+
+if (window.addEventListener){
+window.addEventListener("resize",winsize,false);
+window.addEventListener("load",init,false);
+}
+else if (window.attachEvent){
+window.attachEvent("onresize",winsize);
+window.attachEvent("onload",init);
+}
+
+})();
+}//End.
+// -->
+// --&gt;
+// --&gt;
+// --&gt;
+</script> <!-- fin flocons --></p>
+<div style="position: absolute; left: 80%; top: 30%; padding: 2em;">
+<a href="/3/synthe" target="_blank"><img src="icon/stan.png" width="150" height="150" alt="stan" title="stan" border="0"></a></div>
+<div style="position: absolute; right: 5%; bottom: 5%;">
+nique bien ta mere <a href="xnxx.com">Pierro et matheo</a>
+</div></body></html>
